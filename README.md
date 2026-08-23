@@ -13,7 +13,7 @@ This project demonstrates a responsive and visually appealing implementation of 
 
 ## 📸 Screenshots
 
-*(You can add screenshots or GIFs of your UI here later)*
+<img width="200" height="400" alt="WhatsApp Image 2026-08-23 at 11 17 03 PM" src="https://github.com/user-attachments/assets/1374a4d4-b54c-4b53-b11c-d41d75c8a25e" />
 
 ## 🚀 Getting Started
 
