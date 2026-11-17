@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'login/screens/login_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,14 +17,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NTI UI Test',
+      title: 'Mailchimp Campaign & Notes',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFffffff)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFFFE01B),
+          primary: const Color(0xFFFFE01B),
+        ),
+        scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFFffffff),
-          foregroundColor: Colors.white,
-          centerTitle: true,
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+          centerTitle: false,
+          elevation: 0,
         ),
         useMaterial3: true,
       ),
@@ -29,7 +40,7 @@ class MyApp extends StatelessWidget {
           child: child!,
         );
       },
-      home: const Home(),
+      home: const LoginScreen(),
     );
   }
 }
